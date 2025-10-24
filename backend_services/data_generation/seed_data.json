@@ -1,0 +1,249 @@
+[
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "username": "admin",
+      "first_name": "Admin",
+      "last_name": "User",
+      "email": "admin@telemed.com",
+      "is_staff": true,
+      "is_superuser": true,
+      "is_active": true,
+      "password": "admin",
+      "date_joined": "2024-01-01T08:00:00Z"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "username": "Dr. Ekta",
+      "first_name": "Ekta",
+      "last_name": "Patel",
+      "email": "dr.ekta@telemed.com",
+      "is_staff": false,
+      "is_superuser": false,
+      "is_active": true,
+      "password": "pbkdf2_sha256$600000$KwZ8vY5xJQqR$xQPNQZvjZ5F5xJQqRKwZ8vY5xJQqRKwZ8vY5xJQqR=",
+      "date_joined": "2024-01-15T09:00:00Z"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "username": "Dr. Seamus",
+      "first_name": "Seamus",
+      "last_name": "Moore",
+      "email": "dr.seamus@telemed.com",
+      "is_staff": false,
+      "is_superuser": false,
+      "is_active": true,
+      "password": "pbkdf2_sha256$600000$KwZ8vY5xJQqR$xQPNQZvjZ5F5xJQqRKwZ8vY5xJQqRKwZ8vY5xJQqR=",
+      "date_joined": "2024-01-20T10:00:00Z"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 4,
+    "fields": {
+      "username": "Seamus Moore",
+      "first_name": "Seamus",
+      "last_name": "Moore",
+      "email": "seamus.telemed@email.com",
+      "is_staff": false,
+      "is_superuser": false,
+      "is_active": true,
+      "password": "pbkdf2_sha256$600000$KwZ8vY5xJQqR$xQPNQZvjZ5F5xJQqRKwZ8vY5xJQqRKwZ8vY5xJQqR=",
+      "date_joined": "2024-02-01T11:00:00Z"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 5,
+    "fields": {
+      "username": "Priya Sharma",
+      "first_name": "Priya",
+      "last_name": "Sharma",
+      "email": "priya.sharma@email.com",
+      "is_staff": false,
+      "is_superuser": false,
+      "is_active": true,
+      "password": "pbkdf2_sha256$600000$KwZ8vY5xJQqR$xQPNQZvjZ5F5xJQqRKwZ8vY5xJQqRKwZ8vY5xJQqR=",
+      "date_joined": "2024-02-05T12:00:00Z"
+    }
+  },
+  {
+    "model": "roles.role",
+    "pk": 1,
+    "fields": {
+      "title": "Doctor",
+      "date_created": "2024-01-01T08:00:00Z",
+      "date_modified": "2024-01-01T08:00:00Z",
+      "archive": false
+    }
+  },
+  {
+    "model": "roles.role",
+    "pk": 2,
+    "fields": {
+      "title": "Patient",
+      "date_created": "2024-01-01T08:00:00Z",
+      "date_modified": "2024-01-01T08:00:00Z",
+      "archive": false
+    }
+  },
+  {
+    "model": "consultations.consultation",
+    "pk": 1,
+    "fields": {
+      "patient": 4,
+      "doctor": 2,
+      "date_created": "2024-10-15T10:00:00Z",
+      "date_modified": "2024-10-15T10:00:00Z",
+      "archive": false
+    }
+  },
+  {
+    "model": "consultations.consultation",
+    "pk": 2,
+    "fields": {
+      "patient": 5,
+      "doctor": 3,
+      "date_created": "2024-10-16T14:30:00Z",
+      "date_modified": "2024-10-16T14:30:00Z",
+      "archive": false
+    }
+  },
+  {
+    "model": "consultation_messages.message",
+    "pk": 1,
+    "fields": {
+      "consultation": 1,
+      "author": 4,
+      "author_role": 2,
+      "content": "Hello Dr. Ekta, I have been experiencing headaches every afternoon.",
+      "date_created": "2024-10-15T10:05:00Z",
+      "last_modified": "2024-10-15T10:05:00Z",
+      "archive": false
+    }
+  },
+  {
+    "model": "consultation_messages.message",
+    "pk": 2,
+    "fields": {
+      "consultation": 1,
+      "author": 2,
+      "author_role": 1,
+      "content": "Hi Seamus, are the headaches sharp or dull? How often do they occur?",
+      "date_created": "2024-10-15T10:08:00Z",
+      "last_modified": "2024-10-15T10:08:00Z",
+      "archive": false
+    }
+  },
+  {
+    "model": "consultation_messages.message",
+    "pk": 3,
+    "fields": {
+      "consultation": 1,
+      "author": 4,
+      "author_role": 2,
+      "content": "Mostly dull, sometimes throbbing when working on the computer.",
+      "date_created": "2024-10-15T10:10:00Z",
+      "last_modified": "2024-10-15T10:10:00Z",
+      "archive": false
+    }
+  },
+  {
+    "model": "consultation_messages.message",
+    "pk": 4,
+    "fields": {
+      "consultation": 1,
+      "author": 2,
+      "author_role": 1,
+      "content": "Try taking short breaks every hour and stay hydrated.",
+      "date_created": "2024-10-15T10:15:00Z",
+      "last_modified": "2024-10-15T10:15:00Z",
+      "archive": false
+    }
+  },
+  {
+    "model": "consultation_messages.message",
+    "pk": 5,
+    "fields": {
+      "consultation": 1,
+      "author": 4,
+      "author_role": 2,
+      "content": "Got it, doctor. I'll start doing that from today.",
+      "date_created": "2024-10-15T10:20:00Z",
+      "last_modified": "2024-10-15T10:20:00Z",
+      "archive": false
+    }
+  },
+  {
+    "model": "consultation_messages.message",
+    "pk": 6,
+    "fields": {
+      "consultation": 2,
+      "author": 5,
+      "author_role": 2,
+      "content": "Hello Dr. Seamus, I’ve had trouble sleeping and feel restless at night.",
+      "date_created": "2024-10-16T14:35:00Z",
+      "last_modified": "2024-10-16T14:35:00Z",
+      "archive": false
+    }
+  },
+  {
+    "model": "consultation_messages.message",
+    "pk": 7,
+    "fields": {
+      "consultation": 2,
+      "author": 3,
+      "author_role": 1,
+      "content": "Priya, do you consume caffeine or use screens before bedtime?",
+      "date_created": "2024-10-16T14:40:00Z",
+      "last_modified": "2024-10-16T14:40:00Z",
+      "archive": false
+    }
+  },
+  {
+    "model": "consultation_messages.message",
+    "pk": 8,
+    "fields": {
+      "consultation": 2,
+      "author": 5,
+      "author_role": 2,
+      "content": "Yes, I usually check my phone before sleeping and drink tea in the evening.",
+      "date_created": "2024-10-16T14:45:00Z",
+      "last_modified": "2024-10-16T14:45:00Z",
+      "archive": false
+    }
+  },
+  {
+    "model": "consultation_messages.message",
+    "pk": 9,
+    "fields": {
+      "consultation": 2,
+      "author": 3,
+      "author_role": 1,
+      "content": "Try avoiding screens 1 hour before bed and switch to caffeine-free drinks.",
+      "date_created": "2024-10-16T14:52:00Z",
+      "last_modified": "2024-10-16T14:52:00Z",
+      "archive": false
+    }
+  },
+  {
+    "model": "consultation_messages.message",
+    "pk": 10,
+    "fields": {
+      "consultation": 2,
+      "author": 5,
+      "author_role": 2,
+      "content": "Alright doctor, I’ll make those changes and keep you updated.",
+      "date_created": "2024-10-16T14:58:00Z",
+      "last_modified": "2024-10-16T14:58:00Z",
+      "archive": false
+    }
+  }
+]

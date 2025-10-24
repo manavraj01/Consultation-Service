@@ -1,0 +1,26 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.* 
+
+# Python caches (backend)
+__pycache__/
+*.py[cod]
+*$py.class
+*.sqlite3
+
+# Node caches (frontend)
+node_modules/
+build/
+dist/
+.cache/
+
+# IDEs
+.vscode/
+.idea/

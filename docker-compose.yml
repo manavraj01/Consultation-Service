@@ -1,0 +1,31 @@
+services:
+  backend:
+    build:
+      context: ./backend_services
+    container_name: telemed_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend_services:/app
+    networks:
+      - telemed_network
+
+  frontend:
+    build:
+      context: ./frontend_services
+    container_name: telemed_frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend_services/telemed:/app
+      - /app/node_modules  # keep container-installed modules
+    environment:
+      - REACT_APP_API_URL=http://backend:8000
+    depends_on:
+      - backend
+    networks:
+      - telemed_network
+
+networks:
+  telemed_network:
+    driver: bridge
